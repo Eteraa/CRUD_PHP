@@ -9,11 +9,11 @@ if (filter_var($id, FILTER_VALIDATE_INT)) {
 
 if (isset($_POST["submit"])) {
   $first_name = $_POST['first_name'];
-  $last_name = $_POST['second_name'];
+  $last_name = $_POST['last_name'];
   $email = $_POST['mail'];
 
   
-  $sql = "UPDATE `crud` SET `first_name`=?, `second_name`=?, `mail`=? WHERE id=?";
+  $sql = "UPDATE `crud` SET `first_name`=?, `last_name`=?, `mail`=? WHERE id=?";
 
   
   $stmt = mysqli_stmt_init($conn);
@@ -74,8 +74,8 @@ if (isset($_POST["submit"])) {
           </div>
 
           <div class="col">
-            <label class="form-label">second name:</label>
-            <input type="text" class="form-control" name="second_name" value="<?php echo $row['second_name'] ?>">
+            <label class="form-label">last name:</label>
+            <input type="text" class="form-control" name="last_name" value="<?php echo $row['last_name'] ?>">
           </div>
         </div>
 

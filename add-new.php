@@ -11,10 +11,10 @@
    
 
    $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
-   $last_name = mysqli_real_escape_string($conn, $_POST['second_name']);
+   $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
    $email = mysqli_real_escape_string($conn, $_POST['mail']);
 
-   $sql = "INSERT INTO `crud` (`first_name`, `second_name`, `mail`) VALUES (?, ?, ?)";
+   $sql = "INSERT INTO `crud` (`first_name`, `last_name`, `mail`) VALUES (?, ?, ?)";
    $stmt = mysqli_stmt_init($conn);
    
    if (mysqli_stmt_prepare($stmt, $sql)) {
@@ -77,8 +77,8 @@
                </div>
 
                <div class="col">
-                  <label class="form-label">Second Name:</label>
-                  <input type="text" class="form-control" name="second_name" placeholder="Arabacı">
+                  <label class="form-label">Last Name:</label>
+                  <input type="text" class="form-control" name="last_name" placeholder="Arabacı">
                </div>
             </div>
 

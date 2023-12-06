@@ -32,7 +32,7 @@ include "db_conn.php";
       <thead class="table-dark">
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Second Name</th>
+          <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
           <th scope="col">Email</th>
           <th scope="col">Action</th>
@@ -48,7 +48,7 @@ include "db_conn.php";
           <tr>
             <td><?php echo $row["id"] ?></td>
             <td><?php echo $row["first_name"] ?></td>
-            <td><?php echo $row["second_name"] ?></td>
+            <td><?php echo $row["last_name"] ?></td>
             <td><?php echo $row["mail"] ?></td>
             
             <td>
